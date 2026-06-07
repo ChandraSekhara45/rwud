@@ -1,6 +1,4 @@
 package com.example.rwud.entity;
-
-
 import jakarta.persistence.*;
 
 @Entity
@@ -9,28 +7,29 @@ public class Todo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id ;
+    private Integer id;
     @Column(name = "title")
-    private String title ;
+    private String title;
     @Column(name = "description")
-    private String description ;
+    private String description;
     @Column(name = "status")
-    private boolean status;
+    private Boolean status;
 
 
-    public Todo() {}
+    public Todo() {
+    }
 
-    public Todo(String title, String description, boolean status) {
+    public Todo(String title, String description, Boolean status) {
         this.title = title;
         this.description = description;
         this.status = status;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -50,12 +49,12 @@ public class Todo {
         this.description = description;
     }
 
-    public boolean isStatus() {
+    public Boolean getStatus() {
         return status;
     }
 
-    public void setStatus(boolean done) {
-        this.status = done;
+    public void setStatus(Boolean status) {
+        this.status = status;
     }
 
     @Override
